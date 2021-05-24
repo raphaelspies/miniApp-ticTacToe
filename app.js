@@ -56,20 +56,23 @@ Board.prototype.checkDiags = function(array) {
   var negDiag = []
 
   array.forEach(button => {
-    console.log('button: ',button)
-    if (button.classList.contains('toprow' && 'leftcorner')) {posDiag.push(button)}
-    if (button.classList.contains('bottomrow' && 'rightcorner')) {posDiag.push(button)}
-    if (button.classList.contains('middle')) {posDiag.push(button); posDiag.push(button)}
+    // console.log('button: ',button)
+    if (button.classList.contains('posDiag')) {posDiag.push(button)}
+    if (button.classList.contains('negDiag')) {negDiag.push(button)}
 
-    if (button.classList.contains('middle')) {posDiag.push(button); negDiag.push(button)}
-    if (button.classList.contains('bottomrow' && 'leftcorner')) {negDiag.push(button)}
-    if (button.classList.contains('toprow' && 'rightcorner')) {negDiag.push(button)}
+    // if (button.classList.contains('toprow' && 'leftcorner')) {posDiag.push(button)}
+    // if (button.classList.contains('bottomrow' && 'rightcorner')) {posDiag.push(button)}
+    // if (button.classList.contains('middle')) {posDiag.push(button); posDiag.push(button)}
+
+    // if (button.classList.contains('middle')) {posDiag.push(button); negDiag.push(button)}
+    // if (button.classList.contains('bottomrow' && 'leftcorner')) {negDiag.push(button)}
+    // if (button.classList.contains('toprow' && 'rightcorner')) {negDiag.push(button)}
 
   })
   if (posDiag.length ===3) {alert("victory for x: posDiag!")}
   if (negDiag.length ===3) {alert("victory for x: negDiag!")}
-  console.log('posDiag: ', posDiag);
-  console.log('negDiag: ', negDiag)
+  // console.log('posDiag: ', posDiag);
+  // console.log('negDiag: ', negDiag)
 }
 
 var currentBoard = new Board();
