@@ -1,14 +1,14 @@
-// //  const button = document.querySelector('tictactoe');
- const button = document.getElementsByClassName('tictactoe');
+ const button = document.querySelector('tictactoe');
+//  const button = document.getElementsByClassName('tictactoe');
 // //  const button = document.getElementById('button');
 
 
 function changeX(event) {
-  // if (button.value === "") {
-    // button.value = "X";
-    // button.innerHTML = "X";
-    console.log(button.id + "selected for X!");
-  // }
+  if (event.target.innerHTML !== "X") {
+    console.log(event.target.innerHTML + " selected for X!");
+    event.target.innerHTML = "X";
+    event.target.value = "X";
+  }
  }
 
 // //  button.onClick('click', changeX);
